@@ -1,0 +1,211 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --dark: #444;
+  --purple: #b303ce;
+  --blue: #acd4fc;
+  --green: #acfcb9;
+  --red: #fcacc7;
+}
+
+.light {
+  --bg: var(--white);
+  --boxShadow: 0px 0px 10px 0px var(--black);
+  --text: var(--black);
+  --guitarShadow: 0 0 0px 0px transparent;
+}
+
+.dark {
+  --bg: var(--dark);
+  --boxShadow: 0px 0px 10px 0px var(--white);
+  --text: var(--white);
+  --guitarShadow: 0 0 20px 1px rgba(255, 255, 255, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html,
+button {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-bar {
+  width: 100%;
+  padding: 0px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--boxShadow);
+}
+
+.nav-bar div {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-bar div button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.nav-bar div img {
+  width: 35px;
+  transition: .5s;
+}
+
+.nav-bar div img:hover {
+  scale: 1.1;
+}
+
+.logo img {
+  width: 100px;
+}
+
+.nav-bar h3 {
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+
+.nav-bar span {
+  background-color: var(--red);
+  color: var(--purple);
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  position: absolute;
+  right: 93px;
+  top: 17px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 50px;
+  margin: 100px 0px;
+  padding-inline: 100px;
+}
+
+.guitar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.guitar img {
+  width: 100px;
+  background-color: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--guitarShadow);
+}
+
+.guitar h4 {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.guitar h3 {
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.guitar input {
+  align-self: flex-end;
+  width: 100%;
+  padding: 5px;
+  border: 0.5px solid var(--text);
+  border-radius: 8px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.guitar input:hover {
+  background-color: var(--purple);
+  color: white;
+}
+
+.wrapper-cart {
+  display: grid;
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+  margin: 50px 0px;
+  padding-inline: 100px;
+}
+
+.guitar-cart {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: start;
+  align-items: end;
+  padding: 10px;
+  border-bottom: 1px solid;
+}
+
+.guitar-cart img {
+  width: 50px;
+  background-color: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--guitarShadow);
+}
+
+.guitar-cart button {
+  width: fit-content;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.guitar-cart button:hover {
+  scale: 1.1;
+}
+
+.guitar-cart svg path{
+  fill: var(--text);
+}
+
+.guitar-cart h4 {
+  align-self: center;
+  text-align: center;
+  width: 100%;
+}
+
+.guitar-cart h3 {
+  width: 95px;
+  text-align: end;
+}
+
+.sum {
+  border-top: 1px solid;
+  padding-top: 10px;
+  padding-right: 10px;
+  text-align: end;
+}
+
+.empty-cart {
+  text-align: center;
+  margin-bottom: 50px;
+}
